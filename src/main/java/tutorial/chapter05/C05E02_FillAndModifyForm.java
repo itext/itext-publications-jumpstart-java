@@ -65,7 +65,7 @@ public class C05E02_FillAndModifyForm {
         fields.get("shift").setValue("Any");
 
         PdfFont courier = PdfFontFactory.createFont(FontConstants.COURIER);
-        fields.get("info").setValue("I was 38 years old when I became a 007 agent.", courier, 7);
+        fields.get("info").setValue("I was 38 years old when I became an MI6 agent.", courier, 7);
 
         pdfDoc.close();
 
