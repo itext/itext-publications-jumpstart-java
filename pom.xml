@@ -7,7 +7,7 @@
     <artifactId>tutorial</artifactId>
     <version>7.0.1-SNAPSHOT</version>
 
-    <name>iText 7 - tutorial</name>
+    <name>iText 7 - jump-start tutorial</name>
     <url>http://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
 
     <properties>
@@ -81,7 +81,6 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.18</version>
         </dependency>
-
     </dependencies>
 
     <build>
