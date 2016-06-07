@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.itextpdf</groupId>
+    <groupId>com.itextpdf.publications</groupId>
     <artifactId>tutorial</artifactId>
     <version>7.0.1-SNAPSHOT</version>
 
-    <name>Publications: iText 7 - jump-start tutorial</name>
+    <name>iText 7 Publications: Jump-start Tutorial</name>
     <url>http://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
 
     <properties>
