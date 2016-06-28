@@ -5,10 +5,12 @@ package tutorial.chapter06;
 
 import com.itextpdf.forms.PdfPageFormCopier;
 import com.itextpdf.kernel.pdf.*;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.IOException;
 
+@WrapToTest
 public class C06E07_Combine_Forms {
     public static final String DEST = "results/chapter06/combined_forms.pdf";
     public static final String SRC1 = "src/main/resources/pdf/subscribe.pdf";

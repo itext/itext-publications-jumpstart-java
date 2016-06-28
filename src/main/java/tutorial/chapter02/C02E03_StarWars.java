@@ -10,6 +10,7 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfPage;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,6 +22,7 @@ import java.util.List;
 /**
  * Simple drawing text example.
  */
+@WrapToTest
 public class C02E03_StarWars {
 
     public static final String DEST = "results/chapter02/star_wars.pdf";

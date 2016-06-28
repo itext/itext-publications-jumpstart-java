@@ -12,6 +12,7 @@ import com.itextpdf.kernel.pdf.annot.PdfAnnotation;
 import com.itextpdf.kernel.pdf.annot.PdfTextAnnotation;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,6 +22,7 @@ import java.io.OutputStream;
 /**
  * Simple text annotation example.
  */
+@WrapToTest
 public class C04E01_01_TextAnnotation {
 
     public static final String DEST = "results/chapter04/text_annotation.pdf";

@@ -10,6 +10,7 @@ import com.itextpdf.kernel.pdf.annot.PdfLinkAnnotation;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Link;
 import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -19,6 +20,7 @@ import java.io.OutputStream;
 /**
  * Simple link annotation example.
  */
+@WrapToTest
 public class C04E01_02_LinkAnnotation {
 
     public static final String DEST = "results/chapter04/link_annotation.pdf";

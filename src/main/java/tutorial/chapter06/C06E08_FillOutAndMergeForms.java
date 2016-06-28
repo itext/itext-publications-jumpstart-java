@@ -10,11 +10,13 @@ import com.itextpdf.io.source.ByteArrayOutputStream;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfReader;
 import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.*;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+@WrapToTest
 public class C06E08_FillOutAndMergeForms {
     public static final String DEST = "results/chapter06/fill_out_and_merge_forms.pdf";
     public static final String SRC = "src/main/resources/pdf/state.pdf";

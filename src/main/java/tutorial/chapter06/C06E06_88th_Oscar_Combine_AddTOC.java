@@ -15,11 +15,13 @@ import com.itextpdf.layout.element.TabStop;
 import com.itextpdf.layout.element.Text;
 import com.itextpdf.layout.property.TabAlignment;
 import com.itextpdf.layout.property.TextAlignment;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+@WrapToTest
 public class C06E06_88th_Oscar_Combine_AddTOC {
     public static final String SRC1 = "src/main/resources/pdf/88th_noms_announcement.pdf";
     public static final String SRC2 = "src/main/resources/pdf/oscars_movies_checklist_2016.pdf";

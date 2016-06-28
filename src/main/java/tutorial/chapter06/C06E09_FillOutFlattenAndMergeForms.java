@@ -9,11 +9,13 @@ import com.itextpdf.io.source.ByteArrayOutputStream;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfReader;
 import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.*;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+@WrapToTest
 public class C06E09_FillOutFlattenAndMergeForms {
     public static final String DEST1 = "results/chapter06/fill_out_flatten_forms_merge.pdf";
     public static final String DEST2 = "results/chapter06/fill_out_flatten_forms_smart_merge.pdf";

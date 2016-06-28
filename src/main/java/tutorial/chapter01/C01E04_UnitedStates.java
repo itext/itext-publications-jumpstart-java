@@ -13,6 +13,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
+import com.itextpdf.test.annotations.WrapToTest;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,6 +25,7 @@ import java.util.StringTokenizer;
 /**
  * Simple table example.
  */
+@WrapToTest
 public class C01E04_UnitedStates {
     public static final String DATA = "src/main/resources/data/united_states.csv";
         

@@ -12,6 +12,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.VerticalAlignment;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,6 +22,7 @@ import java.io.OutputStream;
 /**
  * Simple text markup annotation example.
  */
+@WrapToTest
 public class C04E01_04_TextMarkupAnnotation {
 
     public static final String DEST = "results/chapter04/textmarkup_annotation.pdf";

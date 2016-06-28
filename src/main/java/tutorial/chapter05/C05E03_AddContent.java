@@ -17,6 +17,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.VerticalAlignment;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +25,7 @@ import java.io.IOException;
 /**
  * Simple adding content example.
  */
+@WrapToTest
 public class C05E03_AddContent {
 
     public static final String SRC = "src/main/resources/pdf/ufo.pdf";

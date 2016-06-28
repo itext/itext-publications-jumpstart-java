@@ -7,11 +7,13 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfReader;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.utils.PdfMerger;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
+@WrapToTest
 public class C06E05_88th_Oscar_CombineXofY {
     public static final String SRC1 = "src/main/resources/pdf/88th_reminder_list.pdf";
     public static final String SRC2 = "src/main/resources/pdf/88th_noms_announcement.pdf";

@@ -15,12 +15,14 @@ import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.pdfa.PdfADocument;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.StringTokenizer;
 
+@WrapToTest
 public class C07E03_UnitedStates_PDFA_3a {
     public static final String DATA = "src/main/resources/data/united_states.csv";
     public static final String FONT = "src/main/resources/font/FreeSans.ttf";

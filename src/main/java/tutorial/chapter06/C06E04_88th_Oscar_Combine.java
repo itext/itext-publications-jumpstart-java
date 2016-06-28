@@ -5,10 +5,12 @@ package tutorial.chapter06;
 
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.utils.PdfMerger;
+import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
 import java.io.IOException;
 
+@WrapToTest
 public class C06E04_88th_Oscar_Combine {
     public static final String SRC1 = "src/main/resources/pdf/88th_reminder_list.pdf";
     public static final String SRC2 = "src/main/resources/pdf/88th_noms_announcement.pdf";
