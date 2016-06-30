@@ -18,20 +18,18 @@ import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
 import com.itextpdf.layout.Canvas;
 import com.itextpdf.layout.Document;
-import com.itextpdf.layout.property.Property;
 import com.itextpdf.layout.border.SolidBorder;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
+import com.itextpdf.layout.property.Property;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.VerticalAlignment;
 import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.OutputStream;
 import java.util.StringTokenizer;
 
 /**
@@ -56,12 +54,8 @@ public class C03E03_UFO {
 
     protected void createPdf(String dest) throws Exception {
 
-        //Initialize PDF writer
-        OutputStream fos = new FileOutputStream(dest);
-        PdfWriter writer = new PdfWriter(fos);
-
         //Initialize PDF document
-        PdfDocument pdf = new PdfDocument(writer);
+        PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
         pdf.addEventHandler(PdfDocumentEvent.END_PAGE, new MyEventHandler());
 
         // Initialize document

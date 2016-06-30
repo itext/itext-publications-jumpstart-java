@@ -29,14 +29,9 @@ public class C05E04_ChangePage {
 
     public void manipulatePdf(String src, String dest) throws IOException {
 
-        //Initialize PDF reader
-        PdfReader reader = new PdfReader(src);
-
-        //Initialize PDF writer
-        PdfWriter writer = new PdfWriter(dest);
-
         //Initialize PDF document
-        PdfDocument pdfDoc = new PdfDocument(reader, writer);
+        PdfDocument pdfDoc = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
+
 
         float margin = 72;
         for (int i = 1; i <= pdfDoc.getNumberOfPages(); i++) {

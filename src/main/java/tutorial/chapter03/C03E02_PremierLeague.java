@@ -49,12 +49,8 @@ public class C03E02_PremierLeague {
 
     public void createPdf(String dest) throws IOException {
 
-        //Initialize PDF writer
-        OutputStream fos = new FileOutputStream(dest);
-        PdfWriter writer = new PdfWriter(fos);
-
         //Initialize PDF document
-        PdfDocument pdf = new PdfDocument(writer);
+        PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
         PageSize ps = new PageSize(842, 680);
 
         // Initialize document

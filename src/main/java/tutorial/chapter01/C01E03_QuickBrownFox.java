@@ -12,9 +12,7 @@ import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * Simple image example.
@@ -34,8 +32,7 @@ public class C01E03_QuickBrownFox {
     
     public void createPdf(String dest) throws IOException {
         //Initialize PDF writer
-        OutputStream fos = new FileOutputStream(dest);
-        PdfWriter writer = new PdfWriter(fos);
+        PdfWriter writer = new PdfWriter(dest);
 
         //Initialize PDF document
         PdfDocument pdf = new PdfDocument(writer);

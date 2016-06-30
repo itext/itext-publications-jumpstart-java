@@ -40,14 +40,9 @@ public class C05E03_AddContent {
 
     public void manipulatePdf(String src, String dest) throws IOException {
 
-        //Initialize PDF reader
-        PdfReader reader = new PdfReader(src);
-
-        //Initialize PDF writer
-        PdfWriter writer = new PdfWriter(dest);
-
         //Initialize PDF document
-        PdfDocument pdfDoc = new PdfDocument(reader, writer);
+        PdfDocument pdfDoc = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
+
         Document document = new Document(pdfDoc);
         Rectangle pageSize;
         PdfCanvas canvas;

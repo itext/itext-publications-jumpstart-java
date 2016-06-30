@@ -8,8 +8,8 @@ import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.test.annotations.WrapToTest;
+
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
@@ -28,8 +28,7 @@ public class C01E01_HelloWorld {
     
     public void createPdf(String dest) throws IOException {
         //Initialize PDF writer
-        FileOutputStream fos = new FileOutputStream(dest);
-        PdfWriter writer = new PdfWriter(fos);
+        PdfWriter writer = new PdfWriter(dest);
 
         //Initialize PDF document
         PdfDocument pdf = new PdfDocument(writer);

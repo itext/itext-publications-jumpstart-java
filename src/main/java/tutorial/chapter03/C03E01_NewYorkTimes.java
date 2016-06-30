@@ -48,12 +48,9 @@ public class C03E01_NewYorkTimes {
     }
 
     protected void createPdf(String dest) throws Exception {
-        //Initialize PDF writer
-        OutputStream fos = new FileOutputStream(dest);
-        PdfWriter writer = new PdfWriter(fos);
 
         //Initialize PDF document
-        PdfDocument pdf = new PdfDocument(writer);
+        PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
         PageSize ps = PageSize.A5;
 
         // Initialize document

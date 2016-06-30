@@ -39,14 +39,8 @@ public class C05E01_AddAnnotationsAndContent {
 
     public void manipulatePdf(String src, String dest) throws IOException {
 
-        //Initialize PDF reader
-        PdfReader reader = new PdfReader(src);
-
-        //Initialize PDF writer
-        PdfWriter writer = new PdfWriter(dest);
-
         //Initialize PDF document
-        PdfDocument pdfDoc = new PdfDocument(reader, writer);
+        PdfDocument pdfDoc = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
 
         //Add text annotation
         PdfAnnotation ann = new PdfTextAnnotation(new Rectangle(400, 795, 0, 0))

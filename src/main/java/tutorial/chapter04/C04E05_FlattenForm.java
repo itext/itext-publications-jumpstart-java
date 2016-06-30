@@ -30,14 +30,9 @@ public class C04E05_FlattenForm {
 
     public void manipulatePdf(String src, String dest) throws IOException {
 
-        //Initialize PDF reader
-        PdfReader reader = new PdfReader(src);
-
-        //Initialize PDF writer
-        PdfWriter writer = new PdfWriter(dest);
-
         //Initialize PDF document
-        PdfDocument pdf = new PdfDocument(reader, writer);
+        PdfDocument pdf = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
+
 
         PdfAcroForm form = PdfAcroForm.getAcroForm(pdf, true);
         Map<String, PdfFormField> fields = form.getFormFields();

@@ -5,7 +5,10 @@ package tutorial.chapter04;
 
 import com.itextpdf.kernel.color.Color;
 import com.itextpdf.kernel.geom.Rectangle;
-import com.itextpdf.kernel.pdf.*;
+import com.itextpdf.kernel.pdf.PdfArray;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfString;
+import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.annot.PdfAnnotation;
 import com.itextpdf.kernel.pdf.annot.PdfTextMarkupAnnotation;
 import com.itextpdf.layout.Document;
@@ -15,9 +18,7 @@ import com.itextpdf.layout.property.VerticalAlignment;
 import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * Simple text markup annotation example.
@@ -35,12 +36,8 @@ public class C04E01_04_TextMarkupAnnotation {
 
     public void createPdf(String dest) throws IOException {
 
-        //Initialize PDF writer
-        OutputStream fos = new FileOutputStream(dest);
-        PdfWriter writer = new PdfWriter(fos);
-
         //Initialize PDF document
-        PdfDocument pdf = new PdfDocument(writer);
+        PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
 
         //Initialize document
         Document document = new Document(pdf);
