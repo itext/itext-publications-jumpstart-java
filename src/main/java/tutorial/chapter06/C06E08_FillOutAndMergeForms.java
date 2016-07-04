@@ -30,6 +30,7 @@ public class C06E08_FillOutAndMergeForms {
 
     public void createPdf(String dest) throws IOException {
         PdfDocument pdfDocument = new PdfDocument(new PdfWriter(dest));
+        PdfPageFormCopier formCopier = new PdfPageFormCopier();
 
         BufferedReader bufferedReader = new BufferedReader(new FileReader(DATA));
         String line;
@@ -74,7 +75,7 @@ public class C06E08_FillOutAndMergeForms {
             sourcePdfDocument = new PdfDocument(new PdfReader(new ByteArrayInputStream(baos.toByteArray())));
 
             //Copy pages
-            sourcePdfDocument.copyPagesTo(1, sourcePdfDocument.getNumberOfPages(), pdfDocument, new PdfPageFormCopier());
+            sourcePdfDocument.copyPagesTo(1, sourcePdfDocument.getNumberOfPages(), pdfDocument, formCopier);
             sourcePdfDocument.close();
         }
 

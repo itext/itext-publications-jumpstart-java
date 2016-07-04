@@ -28,10 +28,11 @@ public class C06E07_Combine_Forms {
                 new PdfDocument(new PdfReader(SRC1)),
                 new PdfDocument(new PdfReader(SRC2))
         };
+        PdfPageFormCopier formCopier = new PdfPageFormCopier();
         for (PdfDocument sourcePdfDocument : sources) {
             sourcePdfDocument.copyPagesTo(
                     1, sourcePdfDocument.getNumberOfPages(),
-                    destPdfDocument, new PdfPageFormCopier());
+                    destPdfDocument, formCopier);
             sourcePdfDocument.close();
         }
         destPdfDocument.close();
