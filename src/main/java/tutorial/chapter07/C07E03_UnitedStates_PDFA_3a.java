@@ -8,7 +8,6 @@ import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.pdf.filespec.PdfFileSpec;
-import com.itextpdf.kernel.xmp.XMPException;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.property.HorizontalAlignment;
 import com.itextpdf.layout.element.Cell;
@@ -32,13 +31,13 @@ public class C07E03_UnitedStates_PDFA_3a {
 
     public static final String DEST = "results/chapter07/united_states_PDFA-3a.pdf";
     
-    public static void main(String args[]) throws IOException, XMPException {
+    public static void main(String args[]) throws IOException {
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C07E03_UnitedStates_PDFA_3a().createPdf(DEST);
     }
     
-    public void createPdf(String dest) throws IOException, XMPException {
+    public void createPdf(String dest) throws IOException {
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
             PdfAConformanceLevel.PDF_A_3A,
             new PdfOutputIntent("Custom", "", "http://www.color.org",

@@ -5,7 +5,6 @@ package tutorial.chapter07;
 
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.utils.PdfMerger;
-import com.itextpdf.kernel.xmp.XMPException;
 import com.itextpdf.pdfa.PdfADocument;
 import com.itextpdf.test.annotations.WrapToTest;
 
@@ -21,13 +20,13 @@ public class C07E04_MergePDFADocuments {
     public static final String SRC2 = "src/main/resources/pdf/united_states_PDFA-1a.pdf";
     public static final String DEST = "results/chapter07/merged_PDFA-1a_documents.pdf";
 
-    public static void main(String args[]) throws IOException, XMPException {
+    public static void main(String args[]) throws IOException {
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C07E04_MergePDFADocuments().createPdf(DEST);
     }
 
-    public void createPdf(String dest) throws IOException, XMPException {
+    public void createPdf(String dest) throws IOException {
         //Initialize PDFA document with output intent
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
             PdfAConformanceLevel.PDF_A_1A,

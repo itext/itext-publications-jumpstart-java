@@ -10,7 +10,6 @@ import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.pdf.PdfAConformanceLevel;
 import com.itextpdf.kernel.pdf.PdfOutputIntent;
 import com.itextpdf.kernel.pdf.PdfWriter;
-import com.itextpdf.kernel.xmp.XMPException;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Image;
 import com.itextpdf.layout.element.Paragraph;
@@ -32,13 +31,13 @@ public class C07E02_QuickBrownFox_PDFA_1a {
         
     public static final String DEST = "results/chapter07/quick_brown_fox_PDFA-1a.pdf";
     
-    public static void main(String args[]) throws IOException, XMPException {
+    public static void main(String args[]) throws IOException {
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C07E02_QuickBrownFox_PDFA_1a().createPdf(DEST);
     }
     
-    public void createPdf(String dest) throws IOException, XMPException {
+    public void createPdf(String dest) throws IOException {
         //Initialize PDFA document with output intent
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
             PdfAConformanceLevel.PDF_A_1A,
