@@ -25,6 +25,7 @@ import com.itextpdf.layout.renderer.DrawContext;
 import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.StringTokenizer;
 
 /**
@@ -63,7 +64,7 @@ public class C03E02_PremierLeague {
                 .setTextAlignment(TextAlignment.CENTER)
                 .setHorizontalAlignment(HorizontalAlignment.CENTER);
 
-        BufferedReader br = new BufferedReader(new FileReader(DATA));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(DATA), StandardCharsets.UTF_8));
         String line = br.readLine();
         process(table, line, bold, true);
         while ((line = br.readLine()) != null) {
