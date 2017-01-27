@@ -24,6 +24,7 @@ import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.property.Property;
 import com.itextpdf.layout.property.TextAlignment;
+import com.itextpdf.layout.property.UnitValue;
 import com.itextpdf.layout.property.VerticalAlignment;
 import com.itextpdf.test.annotations.WrapToTest;
 
@@ -65,7 +66,7 @@ public class C03E03_UFO {
                 .setTextAlignment(TextAlignment.CENTER).setFont(helveticaBold).setFontSize(14);
         document.add(p);
 
-        Table table = new Table(new float[]{3, 5, 7, 4});
+        Table table = new Table(UnitValue.createPercentArray(new float[]{3, 5, 7, 4}));
         table.setWidthPercent(100);
 
         BufferedReader br = new BufferedReader(new FileReader(DATA));
