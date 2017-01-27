@@ -13,7 +13,6 @@ import com.itextpdf.layout.property.HorizontalAlignment;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
-import com.itextpdf.layout.property.UnitValue;
 import com.itextpdf.pdfa.PdfADocument;
 import com.itextpdf.test.annotations.WrapToTest;
 
@@ -72,7 +71,7 @@ public class C07E03_UnitedStates_PDFA_3a {
         PdfFont bold = PdfFontFactory.createFont(BOLD_FONT, true);
 
         // Create content
-        Table table = new Table(UnitValue.createPercentArray(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1}));
+        Table table = new Table(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1});
         table.setWidthPercent(100);
         BufferedReader br = new BufferedReader(new FileReader(DATA));
         String line = br.readLine();
