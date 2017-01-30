@@ -66,7 +66,7 @@ public class C03E03_UFO {
                 .setTextAlignment(TextAlignment.CENTER).setFont(helveticaBold).setFontSize(14);
         document.add(p);
 
-        Table table = new Table(UnitValue.createPercentArray(new float[]{20, 25, 35, 20}));
+        Table table = new Table(UnitValue.createPercentArray(new float[]{3, 5, 7, 4}));
 
         BufferedReader br = new BufferedReader(new FileReader(DATA));
         String line = br.readLine();
