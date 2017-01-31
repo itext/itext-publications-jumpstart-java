@@ -13,6 +13,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
+import com.itextpdf.layout.property.UnitValue;
 import com.itextpdf.test.annotations.WrapToTest;
 
 import java.io.BufferedReader;
@@ -27,30 +28,29 @@ import java.util.StringTokenizer;
 @WrapToTest
 public class C01E04_UnitedStates {
     public static final String DATA = "src/main/resources/data/united_states.csv";
-        
+
     public static final String DEST = "results/chapter01/united_states.pdf";
-    
+
     public static void main(String args[]) throws IOException {
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C01E04_UnitedStates().createPdf(DEST);
     }
-    
+
     public void createPdf(String dest) throws IOException {
         //Initialize PDF writer
         PdfWriter writer = new PdfWriter(dest);
 
         //Initialize PDF document
         PdfDocument pdf = new PdfDocument(writer);
-        
+
         // Initialize document
         Document document = new Document(pdf, PageSize.A4.rotate());
         document.setMargins(20, 20, 20, 20);
-                
+
         PdfFont font = PdfFontFactory.createFont(FontConstants.HELVETICA);
         PdfFont bold = PdfFontFactory.createFont(FontConstants.HELVETICA_BOLD);
-        Table table = new Table(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1});
-        table.setWidthPercent(100);
+        Table table = new Table(UnitValue.createPercentArray(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1}));
         BufferedReader br = new BufferedReader(new FileReader(DATA));
         String line = br.readLine();
         process(table, line, bold, true);
@@ -59,7 +59,7 @@ public class C01E04_UnitedStates {
         }
         br.close();
         document.add(table);
-        
+
         //Close document
         document.close();
     }
