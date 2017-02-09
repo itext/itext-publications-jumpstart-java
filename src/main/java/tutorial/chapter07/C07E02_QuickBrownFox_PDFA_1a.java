@@ -1,4 +1,12 @@
 /*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2017 iText Group NV
+    Authors: iText Software.
+
+    For more information, please contact iText Software at this address:
+    sales@itextpdf.com
+ */
+/*
  * PDF/A-1a example
  */
 package tutorial.chapter07;
@@ -21,22 +29,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-
 @WrapToTest
 public class C07E02_QuickBrownFox_PDFA_1a {
     public static final String DOG = "src/main/resources/img/dog.bmp";
     public static final String FOX = "src/main/resources/img/fox.bmp";
     public static final String FONT = "src/main/resources/font/FreeSans.ttf";
     public static final String INTENT = "src/main/resources/color/sRGB_CS_profile.icm";
-        
+
     public static final String DEST = "results/chapter07/quick_brown_fox_PDFA-1a.pdf";
-    
+
     public static void main(String args[]) throws IOException {
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C07E02_QuickBrownFox_PDFA_1a().createPdf(DEST);
     }
-    
+
     public void createPdf(String dest) throws IOException {
         //Initialize PDFA document with output intent
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
