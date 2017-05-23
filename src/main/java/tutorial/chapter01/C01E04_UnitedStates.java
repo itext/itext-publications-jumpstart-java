@@ -58,7 +58,8 @@ public class C01E04_UnitedStates {
 
         PdfFont font = PdfFontFactory.createFont(FontConstants.HELVETICA);
         PdfFont bold = PdfFontFactory.createFont(FontConstants.HELVETICA_BOLD);
-        Table table = new Table(UnitValue.createPercentArray(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1}));
+        Table table = new Table(UnitValue.createPercentArray(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1}))
+                .useAllAvailableWidth();
         BufferedReader br = new BufferedReader(new FileReader(DATA));
         String line = br.readLine();
         process(table, line, bold, true);
