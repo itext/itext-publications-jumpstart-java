@@ -68,7 +68,7 @@ public class C07E03_UnitedStates_PDFA_3a {
         PdfFileSpec fileSpec = PdfFileSpec.createEmbeddedFileSpec(
             pdf, Files.readAllBytes(Paths.get(DATA)), "united_states.csv",
             "united_states.csv", new PdfName("text/csv"), parameters,
-            PdfName.Data, false);
+            PdfName.Data);
         fileSpec.put(new PdfName("AFRelationship"), new PdfName("Data"));
         pdf.addFileAttachment("united_states.csv", fileSpec);
         PdfArray array = new PdfArray();

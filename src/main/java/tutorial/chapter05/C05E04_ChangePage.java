@@ -11,7 +11,7 @@
  */
 package tutorial.chapter05;
 
-import com.itextpdf.kernel.color.*;
+import com.itextpdf.kernel.colors.Color;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
