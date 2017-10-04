@@ -13,7 +13,7 @@ package tutorial.chapter03;
 
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.io.image.ImageDataFactory;
-import com.itextpdf.kernel.color.Color;
+import com.itextpdf.kernel.color.ColorConstants;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.PageSize;
@@ -98,7 +98,7 @@ public class C03E01_NewYorkTimes {
         Paragraph p2 = new Paragraph()
                 .setFont(timesNewRoman)
                 .setFontSize(7)
-                .setFontColor(Color.GRAY)
+                .setFontColor(ColorConstants.GRAY)
                 .add(author);
         doc.add(p2);
         Paragraph p3 = new Paragraph()

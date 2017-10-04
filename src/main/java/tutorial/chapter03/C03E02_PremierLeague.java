@@ -13,6 +13,7 @@ package tutorial.chapter03;
 
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.kernel.color.Color;
+import com.itextpdf.kernel.color.ColorConstants;
 import com.itextpdf.kernel.color.DeviceCmyk;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
@@ -100,7 +101,7 @@ public class C03E02_PremierLeague {
             } else {
                 columnNumber++;
                 Cell cell = new Cell().add(new Paragraph(tokenizer.nextToken()));
-                cell.setFont(font).setBorder(new SolidBorder(Color.BLACK, 0.5f));
+                cell.setFont(font).setBorder(new SolidBorder(ColorConstants.BLACK, 0.5f));
                 switch (columnNumber) {
                     case 4:
                         cell.setBackgroundColor(greenColor);
