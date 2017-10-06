@@ -50,10 +50,10 @@ public class C04E01_01_TextAnnotation {
 
         //Create text annotation
         PdfAnnotation ann = new PdfTextAnnotation(new Rectangle(20, 800, 0, 0))
+                .setOpen(true)
                 .setColor(ColorConstants.GREEN)
                 .setTitle(new PdfString("iText"))
-                .setContents("With iText, you can truly take your documentation needs to the next level.")
-                .setOpen(true);
+                .setContents("With iText, you can truly take your documentation needs to the next level.");
         pdf.getFirstPage().addAnnotation(ann);
 
         //Close document
