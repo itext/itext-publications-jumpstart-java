@@ -61,7 +61,6 @@ public class C04E01_04_TextMarkupAnnotation {
                 .setTitle(new PdfString("Hello!"))
                 .setContents(new PdfString("I'm a popup."))
                 .setTitle(new PdfString("iText"))
-                .setOpen(true)
                 .setRectangle(new PdfArray(new float[]{100, 600, 200, 100}));
         pdf.getFirstPage().addAnnotation(ann);
 
