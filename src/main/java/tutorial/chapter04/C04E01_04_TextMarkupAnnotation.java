@@ -11,7 +11,7 @@
  */
 package tutorial.chapter04;
 
-import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfArray;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -57,11 +57,10 @@ public class C04E01_04_TextMarkupAnnotation {
         //Create text markup annotation
         PdfAnnotation ann = PdfTextMarkupAnnotation.createHighLight(new Rectangle(105, 790, 64, 10),
                 new float[]{169, 790, 105, 790, 169, 800, 105, 800})
-                .setColor(Color.YELLOW)
+                .setColor(ColorConstants.YELLOW)
                 .setTitle(new PdfString("Hello!"))
                 .setContents(new PdfString("I'm a popup."))
                 .setTitle(new PdfString("iText"))
-                .setOpen(true)
                 .setRectangle(new PdfArray(new float[]{100, 600, 200, 100}));
         pdf.getFirstPage().addAnnotation(ann);
 

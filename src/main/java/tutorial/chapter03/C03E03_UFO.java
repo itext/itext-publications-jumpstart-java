@@ -13,6 +13,7 @@ package tutorial.chapter03;
 
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.colors.DeviceCmyk;
 import com.itextpdf.kernel.events.Event;
 import com.itextpdf.kernel.events.IEventHandler;
@@ -93,9 +94,9 @@ public class C03E03_UFO {
         StringTokenizer tokenizer = new StringTokenizer(line, ";");
         while (tokenizer.hasMoreTokens()) {
             if (isHeader) {
-                table.addHeaderCell(new Cell().add(new Paragraph(tokenizer.nextToken()).setFont(font)).setFontSize(9).setBorder(new SolidBorder(Color.BLACK, 0.5f)));
+                table.addHeaderCell(new Cell().add(new Paragraph(tokenizer.nextToken()).setFont(font)).setFontSize(9).setBorder(new SolidBorder(ColorConstants.BLACK, 0.5f)));
             } else {
-                table.addCell(new Cell().add(new Paragraph(tokenizer.nextToken()).setFont(font)).setFontSize(9).setBorder(new SolidBorder(Color.BLACK, 0.5f)));
+                table.addCell(new Cell().add(new Paragraph(tokenizer.nextToken()).setFont(font)).setFontSize(9).setBorder(new SolidBorder(ColorConstants.BLACK, 0.5f)));
             }
         }
     }
@@ -130,7 +131,7 @@ public class C03E03_UFO {
 
             //Add watermark
             Canvas canvas = new Canvas(pdfCanvas, pdfDoc, page.getPageSize());
-            canvas.setFontColor(Color.WHITE);
+            canvas.setFontColor(ColorConstants.WHITE);
             canvas.setProperty(Property.FONT_SIZE, 60);
             canvas.setProperty(Property.FONT, helveticaBold);
             canvas.showTextAligned(new Paragraph("CONFIDENTIAL"), 298, 421, pdfDoc.getPageNumber(page),

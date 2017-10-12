@@ -13,6 +13,7 @@ package tutorial.chapter02;
 
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.colors.DeviceCmyk;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.PageSize;
@@ -77,7 +78,7 @@ public class C02E04_StarWarsCrawl {
 
         //Set black background
         canvas.rectangle(0, 0, ps.getWidth(), ps.getHeight())
-                .setColor(Color.BLACK, true)
+                .setColor(ColorConstants.BLACK, true)
                 .fill();
 
         //Replace the origin of the coordinate system to the top left corner

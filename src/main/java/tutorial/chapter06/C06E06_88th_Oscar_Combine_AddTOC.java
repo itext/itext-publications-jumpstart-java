@@ -11,7 +11,7 @@
  */
 package tutorial.chapter06;
 
-import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.pdf.action.PdfAction;
 import com.itextpdf.kernel.pdf.canvas.draw.DottedLine;
@@ -71,7 +71,7 @@ public class C06E06_88th_Oscar_Combine_AddTOC {
 
             //Overwrite page number
             Text text = new Text(String.format("Page %d", pdfDoc.getNumberOfPages() - 1));
-            text.setBackgroundColor(Color.WHITE);
+            text.setBackgroundColor(ColorConstants.WHITE);
             document.add(new Paragraph(text).setFixedPosition(
                     pdfDoc.getNumberOfPages(), 549, 742, 100));
 

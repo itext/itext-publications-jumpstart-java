@@ -11,7 +11,7 @@
  */
 package tutorial.chapter04;
 
-import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.pdf.annot.PdfAnnotation;
@@ -53,7 +53,7 @@ public class C04E01_03_LineAnnotation {
                 .setContentsAsCaption(true)
                 .setTitle(new PdfString("iText"))
                 .setContents("The example of line annotation")
-                .setColor(Color.BLUE);
+                .setColor(ColorConstants.BLUE);
         page.addAnnotation(annotation);
 
         //Close document

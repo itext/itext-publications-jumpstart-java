@@ -12,7 +12,7 @@
 package tutorial.chapter05;
 
 import com.itextpdf.io.font.FontConstants;
-import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -65,7 +65,7 @@ public class C05E03_AddContent {
                     .showText("I want to believe")
                     .endText();
             //Draw footer line
-            canvas.setStrokeColor(Color.BLACK)
+            canvas.setStrokeColor(ColorConstants.BLACK)
                     .setLineWidth(.2f)
                     .moveTo(pageSize.getWidth() / 2 - 30, 20)
                     .lineTo(pageSize.getWidth() / 2 + 30, 20).stroke();
