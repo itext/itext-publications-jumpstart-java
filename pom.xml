@@ -4,7 +4,7 @@
 
     <groupId>com.itextpdf.publications</groupId>
     <artifactId>tutorial</artifactId>
-    <version>7.0.5-SNAPSHOT</version>
+    <version>7.0.6-SNAPSHOT</version>
 
     <name>iText 7 Publications: Jump-start Tutorial</name>
     <url>http://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
