@@ -132,7 +132,7 @@ public class C03E03_UFO {
             //Add watermark
             Canvas canvas = new Canvas(pdfCanvas, pdfDoc, page.getPageSize());
             canvas.setFontColor(ColorConstants.WHITE);
-            canvas.setProperty(Property.FONT_SIZE, 60);
+            canvas.setProperty(Property.FONT_SIZE, UnitValue.createPointValue(60));
             canvas.setProperty(Property.FONT, helveticaBold);
             canvas.showTextAligned(new Paragraph("CONFIDENTIAL"), 298, 421, pdfDoc.getPageNumber(page),
                             TextAlignment.CENTER, VerticalAlignment.MIDDLE, 45);
