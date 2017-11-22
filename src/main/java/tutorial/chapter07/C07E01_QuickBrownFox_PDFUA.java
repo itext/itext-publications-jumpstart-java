@@ -45,7 +45,7 @@ public class C07E01_QuickBrownFox_PDFUA {
     }
     
     public void createPdf(String dest) throws IOException {
-        PdfDocument pdf = new PdfDocument(new PdfWriter(dest, new WriterProperties().addXmpMetadata()));
+        PdfDocument pdf = new PdfDocument(new PdfWriter(dest, new WriterProperties().addUAXmpMetadata()));
         Document document = new Document(pdf);
 
         //Setting some required parameters

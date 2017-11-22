@@ -12,9 +12,9 @@
 package tutorial.chapter03;
 
 import com.itextpdf.io.font.FontConstants;
-import com.itextpdf.kernel.color.Color;
-import com.itextpdf.kernel.color.ColorConstants;
-import com.itextpdf.kernel.color.DeviceCmyk;
+import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
+import com.itextpdf.kernel.colors.DeviceCmyk;
 import com.itextpdf.kernel.events.Event;
 import com.itextpdf.kernel.events.IEventHandler;
 import com.itextpdf.kernel.events.PdfDocumentEvent;
@@ -27,7 +27,7 @@ import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
 import com.itextpdf.layout.Canvas;
 import com.itextpdf.layout.Document;
-import com.itextpdf.layout.border.SolidBorder;
+import com.itextpdf.layout.borders.SolidBorder;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
@@ -132,7 +132,7 @@ public class C03E03_UFO {
             //Add watermark
             Canvas canvas = new Canvas(pdfCanvas, pdfDoc, page.getPageSize());
             canvas.setFontColor(ColorConstants.WHITE);
-            canvas.setProperty(Property.FONT_SIZE, 60);
+            canvas.setProperty(Property.FONT_SIZE, UnitValue.createPointValue(60));
             canvas.setProperty(Property.FONT, helveticaBold);
             canvas.showTextAligned(new Paragraph("CONFIDENTIAL"), 298, 421, pdfDoc.getPageNumber(page),
                             TextAlignment.CENTER, VerticalAlignment.MIDDLE, 45);

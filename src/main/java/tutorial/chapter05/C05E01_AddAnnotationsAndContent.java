@@ -52,9 +52,9 @@ public class C05E01_AddAnnotationsAndContent {
 
         //Add text annotation
         PdfAnnotation ann = new PdfTextAnnotation(new Rectangle(400, 795, 0, 0))
+                .setOpen(true)
                 .setTitle(new PdfString("iText"))
-                .setContents("Please, fill out the form.")
-                .setOpen(true);
+                .setContents("Please, fill out the form.");
         pdfDoc.getFirstPage().addAnnotation(ann);
 
         PdfCanvas canvas = new PdfCanvas(pdfDoc.getFirstPage());
