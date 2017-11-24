@@ -11,7 +11,7 @@
  */
 package tutorial.chapter05;
 
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
@@ -60,7 +60,7 @@ public class C05E03_AddContent {
             pageSize = page.getPageSize();
             canvas = new PdfCanvas(page);
             //Draw header text
-            canvas.beginText().setFontAndSize(PdfFontFactory.createFont(FontConstants.HELVETICA), 7)
+            canvas.beginText().setFontAndSize(PdfFontFactory.createFont(StandardFonts.HELVETICA), 7)
                     .moveText(pageSize.getWidth() / 2 - 24, pageSize.getHeight() - 10)
                     .showText("I want to believe")
                     .endText();
@@ -70,7 +70,7 @@ public class C05E03_AddContent {
                     .moveTo(pageSize.getWidth() / 2 - 30, 20)
                     .lineTo(pageSize.getWidth() / 2 + 30, 20).stroke();
             //Draw page number
-            canvas.beginText().setFontAndSize(PdfFontFactory.createFont(FontConstants.HELVETICA), 7)
+            canvas.beginText().setFontAndSize(PdfFontFactory.createFont(StandardFonts.HELVETICA), 7)
                     .moveText(pageSize.getWidth() / 2 - 7, 10)
                     .showText(String.valueOf(i))
                     .showText(" of ")

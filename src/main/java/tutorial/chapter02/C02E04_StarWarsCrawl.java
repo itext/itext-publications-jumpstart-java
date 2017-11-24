@@ -11,7 +11,7 @@
  */
 package tutorial.chapter02;
 
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.colors.Color;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.colors.DeviceCmyk;
@@ -87,7 +87,7 @@ public class C02E04_StarWarsCrawl {
         float lineHeight = 5;
         float yOffset = -40;
         canvas.beginText()
-            .setFontAndSize(PdfFontFactory.createFont(FontConstants.COURIER_BOLD), 1)
+            .setFontAndSize(PdfFontFactory.createFont(StandardFonts.COURIER_BOLD), 1)
             .setColor(yellowColor, true);
         for (int j = 0; j < text.size(); j++) {
             String line = text.get(j);

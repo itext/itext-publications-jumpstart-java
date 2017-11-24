@@ -11,7 +11,7 @@
  */
 package tutorial.chapter03;
 
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.font.PdfFont;
@@ -48,8 +48,8 @@ public class C03E01_NewYorkTimes {
     static PdfFont timesNewRomanBold = null;
 
     public static void main(String[] args) throws Exception {
-        timesNewRoman = PdfFontFactory.createFont(FontConstants.TIMES_ROMAN);
-        timesNewRomanBold = PdfFontFactory.createFont(FontConstants.TIMES_BOLD);
+        timesNewRoman = PdfFontFactory.createFont(StandardFonts.TIMES_ROMAN);
+        timesNewRomanBold = PdfFontFactory.createFont(StandardFonts.TIMES_BOLD);
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C03E01_NewYorkTimes().createPdf(DEST);

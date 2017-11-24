@@ -13,7 +13,7 @@ package tutorial.chapter05;
 
 import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfFormField;
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
@@ -69,7 +69,7 @@ public class C05E02_FillAndModifyForm {
         fields.get("shift").setOptions(arr);
         fields.get("shift").setValue("Any");
 
-        PdfFont courier = PdfFontFactory.createFont(FontConstants.COURIER);
+        PdfFont courier = PdfFontFactory.createFont(StandardFonts.COURIER);
         fields.get("info").setValue("I was 38 years old when I became an MI6 agent.", courier, 7f);
 
         pdfDoc.close();

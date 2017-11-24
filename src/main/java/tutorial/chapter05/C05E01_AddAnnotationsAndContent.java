@@ -14,7 +14,7 @@ package tutorial.chapter05;
 import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfButtonFormField;
 import com.itextpdf.forms.fields.PdfFormField;
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -58,7 +58,7 @@ public class C05E01_AddAnnotationsAndContent {
         pdfDoc.getFirstPage().addAnnotation(ann);
 
         PdfCanvas canvas = new PdfCanvas(pdfDoc.getFirstPage());
-        canvas.beginText().setFontAndSize(PdfFontFactory.createFont(FontConstants.HELVETICA), 12)
+        canvas.beginText().setFontAndSize(PdfFontFactory.createFont(StandardFonts.HELVETICA), 12)
                 .moveText(265, 597)
                 .showText("I agree to the terms and conditions.")
                 .endText();

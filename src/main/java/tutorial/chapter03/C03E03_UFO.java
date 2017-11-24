@@ -11,7 +11,7 @@
  */
 package tutorial.chapter03;
 
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.colors.Color;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.colors.DeviceCmyk;
@@ -55,8 +55,8 @@ public class C03E03_UFO {
     static PdfFont helveticaBold = null;
 
     public static void main(String[] args) throws Exception {
-        helvetica = PdfFontFactory.createFont(FontConstants.HELVETICA);
-        helveticaBold = PdfFontFactory.createFont(FontConstants.HELVETICA_BOLD);
+        helvetica = PdfFontFactory.createFont(StandardFonts.HELVETICA);
+        helveticaBold = PdfFontFactory.createFont(StandardFonts.HELVETICA_BOLD);
         File file = new File(DEST);
         file.getParentFile().mkdirs();
         new C03E03_UFO().createPdf(DEST);

@@ -11,7 +11,7 @@
  */
 package tutorial.chapter02;
 
-import com.itextpdf.io.font.FontConstants;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -70,7 +70,7 @@ public class C02E03_StarWars {
         //Replace the origin of the coordinate system to the top left corner
         canvas.concatMatrix(1, 0, 0, 1, 0, ps.getHeight());
         canvas.beginText()
-                .setFontAndSize(PdfFontFactory.createFont(FontConstants.COURIER_BOLD), 14)
+                .setFontAndSize(PdfFontFactory.createFont(StandardFonts.COURIER_BOLD), 14)
                 .setLeading(14 * 1.2f)
                 .moveText(70, -40);
         for (String s : text) {
