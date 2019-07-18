@@ -32,8 +32,6 @@ import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.UnitValue;
 import com.itextpdf.layout.renderer.CellRenderer;
 import com.itextpdf.layout.renderer.DrawContext;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.StringTokenizer;
@@ -41,7 +39,6 @@ import java.util.StringTokenizer;
 /**
  * Simple table renderer example.
  */
-@WrapToTest
 public class C03E02_PremierLeague {
 
     public static final String DATA = "src/main/resources/data/premier_league.csv";

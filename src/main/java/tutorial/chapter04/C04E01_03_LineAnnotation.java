@@ -16,15 +16,12 @@ import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.pdf.annot.PdfAnnotation;
 import com.itextpdf.kernel.pdf.annot.PdfLineAnnotation;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
  * Simple line annotation example.
  */
-@WrapToTest
 public class C04E01_03_LineAnnotation {
 
     public static final String DEST = "results/chapter04/line_annotation.pdf";

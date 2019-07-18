@@ -18,15 +18,12 @@ import com.itextpdf.kernel.pdf.PdfPage;
 import com.itextpdf.kernel.pdf.PdfReader;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
  * Simple changing page properties example.
  */
-@WrapToTest
 public class C05E04_ChangePage {
 
     public static final String SRC = "src/main/resources/pdf/ufo.pdf";

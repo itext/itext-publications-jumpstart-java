@@ -14,13 +14,10 @@ package tutorial.chapter07;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.utils.PdfMerger;
 import com.itextpdf.pdfa.PdfADocument;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-@WrapToTest
 public class C07E04_MergePDFADocuments {
     public static final String INTENT = "src/main/resources/color/sRGB_CS_profile.icm";
 

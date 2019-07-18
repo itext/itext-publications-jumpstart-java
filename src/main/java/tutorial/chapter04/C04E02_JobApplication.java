@@ -24,15 +24,12 @@ import com.itextpdf.kernel.pdf.action.PdfAction;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.property.TextAlignment;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
  * Simple widget annotation example.
  */
-@WrapToTest
 public class C04E02_JobApplication {
 
     public static final String DEST = "results/chapter04/job_application.pdf";

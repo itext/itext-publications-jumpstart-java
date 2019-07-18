@@ -18,15 +18,12 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfPage;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
  * Simple changing graphics state example.
  */
-@WrapToTest
 public class C02E02_GridLines {
 
     public static final String DEST = "results/chapter02/grid_lines.pdf";
