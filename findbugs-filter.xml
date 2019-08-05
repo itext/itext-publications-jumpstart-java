@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <Match>
+    <Or>
+      <Class name="tutorial.chapter01.C01E04_UnitedStates"/>
+      <Class name="tutorial.chapter03.C03E03_UFO"/>
+      <Class name="tutorial.chapter06.C06E08_FillOutAndMergeForms"/>
+      <Class name="tutorial.chapter06.C06E09_FillOutFlattenAndMergeForms"/>
+      <Class name="tutorial.chapter07.C07E03_UnitedStates_PDFA_3a"/>
+    </Or>
+    <Method name="createPdf"/>
+    <Bug pattern="DM_DEFAULT_ENCODING"/>
+  </Match>
+</FindBugsFilter>

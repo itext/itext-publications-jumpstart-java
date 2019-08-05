@@ -1,43 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.itextpdf.publications</groupId>
   <artifactId>tutorial</artifactId>
   <version>7.1.8-SNAPSHOT</version>
+
   <name>iText 7 Publications: Jump-start Tutorial</name>
-  <url>http://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
+  <url>https://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
+
   <properties>
+    <bouncycastle.version>1.49</bouncycastle.version>
+    <fb-contrib.version>7.4.3</fb-contrib.version>
+    <findsecbugs.version>1.8.0</findsecbugs.version>
     <integrationtests>com.itextpdf.test.annotations.type.IntegrationTest</integrationtests>
     <java.version>1.7</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sampletests>com.itextpdf.test.annotations.type.SampleTest</sampletests>
+    <spotbugs.version>3.1.11</spotbugs.version>
     <unittests>com.itextpdf.test.annotations.type.UnitTest</unittests>
   </properties>
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>itext-snapshot</id>
-      <name>iText Repository - snapshots</name>
-      <url>https://repo.itextsupport.com/snapshot</url>
-    </repository>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>itext-releases</id>
-      <name>iText Repository - releases</name>
-      <url>https://repo.itextsupport.com/releases</url>
-    </repository>
-  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>com.itextpdf</groupId>
@@ -85,12 +69,38 @@
       <version>1.7.25</version>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>itext-snapshot</id>
+      <name>iText Repository - snapshots</name>
+      <url>https://repo.itextsupport.com/snapshot</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>itext-releases</id>
+      <name>iText Repository - releases</name>
+      <url>https://repo.itextsupport.com/releases</url>
+    </repository>
+  </repositories>
+
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
+        <version>3.8.1</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
@@ -130,7 +140,7 @@
       <plugin>
         <groupId>com.github.ekryd.sortpom</groupId>
         <artifactId>sortpom-maven-plugin</artifactId>
-        <version>2.9.0</version>
+        <version>2.10.0</version>
         <executions>
           <execution>
             <phase>verify</phase>
@@ -152,7 +162,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>tidy-maven-plugin</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <executions>
           <execution>
             <phase>verify</phase>
@@ -165,7 +175,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.0.1</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -182,7 +192,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.0.1</version>
+        <version>3.1.1</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -193,14 +203,47 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>${spotbugs.version}</version>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <effort>Max</effort>
+          <threshold>High</threshold>
+          <xmlOutput>true</xmlOutput>
+          <failOnError>true</failOnError>
+          <excludeFilterFile>findbugs-filter.xml</excludeFilterFile>
+          <plugins>
+            <plugin>
+              <groupId>com.mebigfatguy.fb-contrib</groupId>
+              <artifactId>fb-contrib</artifactId>
+              <version>${fb-contrib.version}</version>
+            </plugin>
+            <plugin>
+              <groupId>com.h3xstream.findsecbugs</groupId>
+              <artifactId>findsecbugs-plugin</artifactId>
+              <version>${findsecbugs.version}</version>
+            </plugin>
+          </plugins>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
+
   <reporting>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.3</version>
+        <version>2.5</version>
       </plugin>
     </plugins>
   </reporting>
