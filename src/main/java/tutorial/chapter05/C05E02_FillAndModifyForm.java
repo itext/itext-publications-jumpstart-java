@@ -18,8 +18,6 @@ import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.pdf.*;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +27,6 @@ import java.util.Map;
 /**
  * Simple filling out form example.
  */
-@WrapToTest
 public class C05E02_FillAndModifyForm {
 
     public static final String SRC = "src/main/resources/pdf/job_application.pdf";

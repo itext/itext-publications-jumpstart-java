@@ -35,8 +35,6 @@ import com.itextpdf.layout.property.Property;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.UnitValue;
 import com.itextpdf.layout.property.VerticalAlignment;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -45,7 +43,6 @@ import java.util.StringTokenizer;
 /**
  * Simple event handler example.
  */
-@WrapToTest
 public class C03E03_UFO {
 
     public static final String DATA = "src/main/resources/data/ufo.csv";

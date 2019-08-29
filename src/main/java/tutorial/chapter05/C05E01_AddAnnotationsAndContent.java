@@ -25,15 +25,12 @@ import com.itextpdf.kernel.pdf.action.PdfAction;
 import com.itextpdf.kernel.pdf.annot.PdfAnnotation;
 import com.itextpdf.kernel.pdf.annot.PdfTextAnnotation;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
  * Simple adding annotations example.
  */
-@WrapToTest
 public class C05E01_AddAnnotationsAndContent {
 
     public static final String SRC = "src/main/resources/pdf/job_application.pdf";

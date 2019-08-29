@@ -16,8 +16,6 @@ import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -25,7 +23,6 @@ import java.util.Map;
 /**
  * Simple filling out form example.
  */
-@WrapToTest
 public class C04E03_CreateAndFill {
 
     public static final String DEST = "results/chapter04/create_and_fill.pdf";

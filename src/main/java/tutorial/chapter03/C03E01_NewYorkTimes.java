@@ -22,8 +22,6 @@ import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.layout.ColumnDocumentRenderer;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.*;
-import com.itextpdf.test.annotations.WrapToTest;
-
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -32,7 +30,6 @@ import java.nio.file.Paths;
 /**
  * Simple column renderer example.
  */
-@WrapToTest
 public class C03E01_NewYorkTimes {
 
     public static final String DEST = "results/chapter03/new_york_times.pdf";

@@ -24,6 +24,8 @@ public class JumpStartWrapperTest extends WrappedSamplesRunner {
         RunnerSearchConfig searchConfig = new RunnerSearchConfig();
         searchConfig.addPackageToRunnerSearchPath("tutorial");
         searchConfig.ignorePackageOrClass("tutorial.chapter06.C06E09_FillOutFlattenAndMergeForms");
+        searchConfig.ignorePackageOrClass("tutorial.C06E09_FillOutFlattenAndMergeFormsWrapperTest");
+        searchConfig.ignorePackageOrClass("tutorial.JumpStartWrapperTest");
         return generateTestsList(searchConfig);
     }
 
