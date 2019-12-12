@@ -7,7 +7,7 @@
   <name>iText 7 Publications: Jump-start Tutorial</name>
   <url>https://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
   <properties>
-    <bouncycastle.version>1.49</bouncycastle.version>
+    <bouncycastle.version>1.64</bouncycastle.version>
     <fb-contrib.version>7.4.3</fb-contrib.version>
     <findsecbugs.version>1.8.0</findsecbugs.version>
     <integrationtests>com.itextpdf.test.annotations.type.IntegrationTest</integrationtests>
