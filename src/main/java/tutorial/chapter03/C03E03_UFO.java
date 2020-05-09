@@ -116,7 +116,7 @@ public class C03E03_UFO {
                     .endText();
 
             //Add watermark
-            Canvas canvas = new Canvas(pdfCanvas, pdfDoc, page.getPageSize());
+            Canvas canvas = new Canvas(pdfCanvas, page.getPageSize());
             canvas.setFontColor(ColorConstants.WHITE);
             canvas.setProperty(Property.FONT_SIZE, UnitValue.createPointValue(60));
             canvas.setProperty(Property.FONT, helveticaBold);
