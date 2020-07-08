@@ -1,14 +1,3 @@
-/*
-    This file is part of the iText (R) project.
-    Copyright (c) 1998-2020 iText Group NV
-    Authors: iText Software.
-
-    For more information, please contact iText Software at this address:
-    sales@itextpdf.com
- */
-/*
- * This example is part of the iText 7 tutorial.
- */
 package tutorial.chapter03;
 
 import com.itextpdf.io.font.constants.StandardFonts;
@@ -127,7 +116,7 @@ public class C03E03_UFO {
                     .endText();
 
             //Add watermark
-            Canvas canvas = new Canvas(pdfCanvas, pdfDoc, page.getPageSize());
+            Canvas canvas = new Canvas(pdfCanvas, page.getPageSize());
             canvas.setFontColor(ColorConstants.WHITE);
             canvas.setProperty(Property.FONT_SIZE, UnitValue.createPointValue(60));
             canvas.setProperty(Property.FONT, helveticaBold);
