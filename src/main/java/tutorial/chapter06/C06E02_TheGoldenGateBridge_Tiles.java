@@ -43,25 +43,25 @@ public class C06E02_TheGoldenGateBridge_Tiles {
         PdfPage page = pdf.addNewPage(PageSize.A4.rotate());
         PdfCanvas canvas = new PdfCanvas(page);
         canvas.concatMatrix(transformationMatrix);
-        canvas.addXObject(pageCopy, 0, -orig.getHeight() / 2f);
+        canvas.addXObjectAt(pageCopy, 0, -orig.getHeight() / 2f);
 
         //The second tile
         page = pdf.addNewPage(PageSize.A4.rotate());
         canvas = new PdfCanvas(page);
         canvas.concatMatrix(transformationMatrix);
-        canvas.addXObject(pageCopy, -orig.getWidth() / 2f, -orig.getHeight() / 2f);
+        canvas.addXObjectAt(pageCopy, -orig.getWidth() / 2f, -orig.getHeight() / 2f);
 
         //The third tile
         page = pdf.addNewPage(PageSize.A4.rotate());
         canvas = new PdfCanvas(page);
         canvas.concatMatrix(transformationMatrix);
-        canvas.addXObject(pageCopy, 0, 0);
+        canvas.addXObjectAt(pageCopy, 0, 0);
 
         //The fourth tile
         page = pdf.addNewPage(PageSize.A4.rotate());
         canvas = new PdfCanvas(page);
         canvas.concatMatrix(transformationMatrix);
-        canvas.addXObject(pageCopy, -orig.getWidth() / 2f, 0);
+        canvas.addXObjectAt(pageCopy, -orig.getWidth() / 2f, 0);
 
         pdf.close();
         sourcePdf.close();
