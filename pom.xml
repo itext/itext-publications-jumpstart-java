@@ -3,15 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.itextpdf.publications</groupId>
   <artifactId>tutorial</artifactId>
-  <version>7.1.13</version>
+  <version>7.1.14</version>
   <name>iText 7 Publications: Jump-start Tutorial</name>
   <url>https://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
   <properties>
-    <bouncycastle.version>1.64</bouncycastle.version>
+    <bouncycastle.version>1.66</bouncycastle.version>
     <fb-contrib.version>7.4.3</fb-contrib.version>
     <findsecbugs.version>1.8.0</findsecbugs.version>
     <integrationtests>com.itextpdf.test.annotations.type.IntegrationTest</integrationtests>
-    <java.version>1.7</java.version>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sampletests>com.itextpdf.test.annotations.type.SampleTest</sampletests>
@@ -62,7 +62,7 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.25</version>
+      <version>1.7.30</version>
     </dependency>
   </dependencies>
   <repositories>

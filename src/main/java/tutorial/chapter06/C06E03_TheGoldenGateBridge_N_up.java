@@ -44,10 +44,10 @@ public class C06E03_TheGoldenGateBridge_N_up {
         canvas.concatMatrix(transformationMatrix);
 
         //Add pages to N-up page
-        canvas.addXObject(pageCopy, 0, orig.getHeight());
-        canvas.addXObject(pageCopy, orig.getWidth(), orig.getHeight());
-        canvas.addXObject(pageCopy, 0, 0);
-        canvas.addXObject(pageCopy, orig.getWidth(), 0);
+        canvas.addXObjectAt(pageCopy, 0, orig.getHeight());
+        canvas.addXObjectAt(pageCopy, orig.getWidth(), orig.getHeight());
+        canvas.addXObjectAt(pageCopy, 0, 0);
+        canvas.addXObjectAt(pageCopy, orig.getWidth(), 0);
 
         pdf.close();
         sourcePdf.close();
