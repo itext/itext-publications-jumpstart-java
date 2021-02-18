@@ -4,6 +4,7 @@ import com.itextpdf.io.font.PdfEncodings;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
+import com.itextpdf.kernel.font.PdfFontFactory.EmbeddingStrategy;
 import com.itextpdf.kernel.pdf.PdfAConformanceLevel;
 import com.itextpdf.kernel.pdf.PdfOutputIntent;
 import com.itextpdf.kernel.pdf.PdfWriter;
@@ -39,7 +40,7 @@ public class C07E02_QuickBrownFox_PDFA_1b {
         Document document = new Document(pdf);
 
         //Fonts need to be embedded
-        PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, true);
+        PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, EmbeddingStrategy.FORCE_EMBEDDED);
         Paragraph p = new Paragraph();
         p.setFont(font);
         p.add(new Text("The quick brown "));

@@ -2,6 +2,7 @@ package tutorial.chapter07;
 
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
+import com.itextpdf.kernel.font.PdfFontFactory.EmbeddingStrategy;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.kernel.pdf.filespec.PdfFileSpec;
@@ -62,8 +63,8 @@ public class C07E03_UnitedStates_PDFA_3a {
         pdf.getCatalog().put(new PdfName("AF"), array);
 
         //Embed fonts
-        PdfFont font = PdfFontFactory.createFont(FONT, true);
-        PdfFont bold = PdfFontFactory.createFont(BOLD_FONT, true);
+        PdfFont font = PdfFontFactory.createFont(FONT, EmbeddingStrategy.FORCE_EMBEDDED);
+        PdfFont bold = PdfFontFactory.createFont(BOLD_FONT, EmbeddingStrategy.FORCE_EMBEDDED);
 
         // Create content
         Table table = new Table(UnitValue.createPercentArray(new float[]{4, 1, 3, 4, 3, 3, 3, 3, 1}))
