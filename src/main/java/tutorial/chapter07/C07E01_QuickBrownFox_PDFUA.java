@@ -44,7 +44,7 @@ public class C07E01_QuickBrownFox_PDFUA {
         info.setTitle("iText7 PDF/UA example");
 
         //Fonts need to be embedded
-        PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, EmbeddingStrategy.PREFER_EMBEDDED);
+        PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, EmbeddingStrategy.FORCE_EMBEDDED);
         Paragraph p = new Paragraph();
         p.setFont(font);
         p.add(new Text("The quick brown "));

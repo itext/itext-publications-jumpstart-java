@@ -43,7 +43,7 @@ public class C07E02_QuickBrownFox_PDFA_1a {
         pdf.setTagged();
 
         //Fonts need to be embedded
-        PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, EmbeddingStrategy.PREFER_EMBEDDED);
+        PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, EmbeddingStrategy.FORCE_EMBEDDED);
         Paragraph p = new Paragraph();
         p.setFont(font);
         p.add(new Text("The quick brown "));
