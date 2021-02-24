@@ -32,9 +32,9 @@ public class C04E05_FlattenForm {
         Map<String, PdfFormField> fields = form.getFormFields();
         fields.get("name").setValue("James Bond");
         fields.get("language").setValue("English");
-        fields.get("experience1").setValue("Off", false);
-        fields.get("experience2").setValue("Yes", false);
-        fields.get("experience3").setValue("Yes", false);
+        fields.get("experience1").setValue("Off");
+        fields.get("experience2").setValue("Yes");
+        fields.get("experience3").setValue("Yes");
         fields.get("shift").setValue("Any");
         fields.get("info").setValue("I was 38 years old when I became an MI6 agent.");
         form.flattenFields();
