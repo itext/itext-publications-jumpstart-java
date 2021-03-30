@@ -2,6 +2,6 @@
 @Library('pipeline-library')_
 
 def repoName = "JumpStart"
-def dependencyRegex = ""
+def dependencyRegex = "itextcore"
 
 automaticJavaBuild(repoName, dependencyRegex)
