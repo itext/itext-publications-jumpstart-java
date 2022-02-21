@@ -54,7 +54,7 @@ public class C06E08_FillOutAndMergeForms {
             
             //Fill out fields
             StringTokenizer tokenizer = new StringTokenizer(line, ";");
-            Map<String, PdfFormField> fields = form.getFormFields();
+            Map<String, PdfFormField> fields = form.getAllFormFields();
             fields.get("name_" + i).setValue(tokenizer.nextToken());
             fields.get("abbr_" + i).setValue(tokenizer.nextToken());
             fields.get("capital_" + i).setValue(tokenizer.nextToken());

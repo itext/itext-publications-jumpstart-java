@@ -43,7 +43,7 @@ public class C06E09_FillOutFlattenAndMergeForms {
             //Read fields
             PdfAcroForm form = PdfAcroForm.getAcroForm(sourcePdfDocument, true);
             StringTokenizer tokenizer = new StringTokenizer(line, ";");
-            Map<String, PdfFormField> fields = form.getFormFields();
+            Map<String, PdfFormField> fields = form.getAllFormFields();
 
             //Fill out fields
             fields.get("name").setValue(tokenizer.nextToken());
