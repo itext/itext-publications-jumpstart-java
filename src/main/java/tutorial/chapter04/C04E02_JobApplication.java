@@ -5,6 +5,11 @@ import com.itextpdf.forms.fields.PdfButtonFormField;
 import com.itextpdf.forms.fields.PdfChoiceFormField;
 import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.forms.fields.PdfTextFormField;
+import com.itextpdf.forms.fields.TextFormFieldBuilder;
+import com.itextpdf.forms.fields.CheckBoxFormFieldBuilder;
+import com.itextpdf.forms.fields.ChoiceFormFieldBuilder;
+import com.itextpdf.forms.fields.PushButtonFormFieldBuilder;
+import com.itextpdf.forms.fields.RadioFormFieldBuilder;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -62,40 +67,52 @@ public class C04E02_JobApplication {
         PdfAcroForm form = PdfAcroForm.getAcroForm(doc.getPdfDocument(), true);
 
         //Create text field
-        PdfTextFormField nameField = PdfTextFormField.createText(doc.getPdfDocument(),
-                new Rectangle(99, 753, 425, 15), "name", "");
+        PdfTextFormField nameField = new TextFormFieldBuilder(doc.getPdfDocument(), "name")
+                .setWidgetRectangle(new Rectangle(99, 753, 425, 15)).createText();
+        nameField.setValue("");
         form.addField(nameField);
 
         //Create radio buttons
-        PdfButtonFormField group = PdfFormField.createRadioGroup(doc.getPdfDocument(), "language", "");
-        PdfFormField.createRadioButton(doc.getPdfDocument(), new Rectangle(130, 728, 15, 15), group, "English");
-        PdfFormField.createRadioButton(doc.getPdfDocument(), new Rectangle(200, 728, 15, 15), group, "French");
-        PdfFormField.createRadioButton(doc.getPdfDocument(), new Rectangle(260, 728, 15, 15), group, "German");
-        PdfFormField.createRadioButton(doc.getPdfDocument(), new Rectangle(330, 728, 15, 15), group, "Russian");
-        PdfFormField.createRadioButton(doc.getPdfDocument(), new Rectangle(400, 728, 15, 15), group, "Spanish");
+        PdfButtonFormField group = new RadioFormFieldBuilder(doc.getPdfDocument(), "language").createRadioGroup();
+        group.setValue("", true);
+        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
+                .setWidgetRectangle(new Rectangle(130, 728, 15, 15)).createRadioButton(group, "English");
+        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
+                .setWidgetRectangle(new Rectangle(200, 728, 15, 15)).createRadioButton(group, "French");
+        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
+                .setWidgetRectangle(new Rectangle(260, 728, 15, 15)).createRadioButton(group, "German");
+        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
+                .setWidgetRectangle(new Rectangle(330, 728, 15, 15)).createRadioButton(group, "Russian");
+        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
+                .setWidgetRectangle(new Rectangle(400, 728, 15, 15)).createRadioButton(group, "Spanish");
         form.addField(group);
 
         //Create checkboxes
         for (int i = 0; i < 3; i++) {
-            PdfButtonFormField checkField = PdfFormField.createCheckBox(doc.getPdfDocument(), new Rectangle(119 + i * 69, 701, 15, 15),
-                    "experience".concat(String.valueOf(i+1)), "Off", PdfFormField.TYPE_CHECK);
+            PdfButtonFormField checkField = new CheckBoxFormFieldBuilder(doc.getPdfDocument(), "experience".concat(String.valueOf(i + 1)))
+                    .setWidgetRectangle(new Rectangle(119 + i * 69, 701, 15, 15))
+                    .setCheckType(PdfFormField.TYPE_CHECK).createCheckBox();
+            checkField.setValue("Off", true);
             form.addField(checkField);
         }
 
         //Create combobox
         String[] options = {"Any", "6.30 am - 2.30 pm", "1.30 pm - 9.30 pm"};
-        PdfChoiceFormField choiceField = PdfFormField.createComboBox(doc.getPdfDocument(), new Rectangle(163, 676, 115, 15),
-                "shift", "Any", options);
+        PdfChoiceFormField choiceField = new ChoiceFormFieldBuilder(doc.getPdfDocument(), "shift")
+                .setWidgetRectangle(new Rectangle(163, 676, 115, 15))
+                .setOptions(options).createComboBox();
+        choiceField.setValue("Any", true);
         form.addField(choiceField);
 
         //Create multiline text field
-        PdfTextFormField infoField = PdfTextFormField.createMultilineText(doc.getPdfDocument(),
-                new Rectangle(158, 625, 366, 40), "info", "");
+        PdfTextFormField infoField = new TextFormFieldBuilder(doc.getPdfDocument(), "info")
+                .setWidgetRectangle(new Rectangle(158, 625, 366, 40)).createMultilineText();
+        infoField.setValue("");
         form.addField(infoField);
 
         //Create push button field
-        PdfButtonFormField button = PdfFormField.createPushButton(doc.getPdfDocument(),
-                new Rectangle(479, 594, 45, 15), "reset", "RESET");
+        PdfButtonFormField button = new PushButtonFormFieldBuilder(doc.getPdfDocument(), "reset").setCaption("RESET")
+                .setWidgetRectangle(new Rectangle(479, 594, 45, 15)).createPushButton();
         button.setAction(PdfAction.createResetForm(new String[] {"name", "language", "experience1", "experience2", "experience3", "shift", "info"}, 0));
         form.addField(button);
 
