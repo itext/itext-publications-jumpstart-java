@@ -113,7 +113,7 @@ public class C04E02_JobApplication {
         //Create push button field
         PdfButtonFormField button = new PushButtonFormFieldBuilder(doc.getPdfDocument(), "reset").setCaption("RESET")
                 .setWidgetRectangle(new Rectangle(479, 594, 45, 15)).createPushButton();
-        button.setAction(PdfAction.createResetForm(new String[] {"name", "language", "experience1", "experience2", "experience3", "shift", "info"}, 0));
+        button.getFirstFormAnnotation().setAction(PdfAction.createResetForm(new String[] {"name", "language", "experience1", "experience2", "experience3", "shift", "info"}, 0));
         form.addField(button);
 
         return form;

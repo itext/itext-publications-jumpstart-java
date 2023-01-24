@@ -60,8 +60,8 @@ public class C05E01_AddAnnotationsAndContent {
         form.addField(checkField);
 
         //Update reset button
-        form.getField("reset").setAction(PdfAction.createResetForm(new String[]{"name", "language",
-                "experience1", "experience2", "experience3", "shift", "info", "agreement"}, 0));
+        form.getField("reset").getFirstFormAnnotation().setAction(PdfAction.createResetForm(new String[]{"name",
+                "language", "experience1", "experience2", "experience3", "shift", "info", "agreement"}, 0));
 
         pdfDoc.close();
 
