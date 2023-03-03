@@ -73,18 +73,14 @@ public class C04E02_JobApplication {
         form.addField(nameField);
 
         //Create radio buttons
-        PdfButtonFormField group = new RadioFormFieldBuilder(doc.getPdfDocument(), "language").createRadioGroup();
+        RadioFormFieldBuilder builder = new RadioFormFieldBuilder(doc.getPdfDocument(), "language");
+        PdfButtonFormField group = builder.createRadioGroup();
         group.setValue("", true);
-        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
-                .setWidgetRectangle(new Rectangle(130, 728, 15, 15)).createRadioButton(group, "English");
-        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
-                .setWidgetRectangle(new Rectangle(200, 728, 15, 15)).createRadioButton(group, "French");
-        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
-                .setWidgetRectangle(new Rectangle(260, 728, 15, 15)).createRadioButton(group, "German");
-        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
-                .setWidgetRectangle(new Rectangle(330, 728, 15, 15)).createRadioButton(group, "Russian");
-        new RadioFormFieldBuilder(doc.getPdfDocument(), "")
-                .setWidgetRectangle(new Rectangle(400, 728, 15, 15)).createRadioButton(group, "Spanish");
+        group.addKid(builder.createRadioButton("English", new Rectangle(130, 728, 15, 15)));
+        group.addKid(builder.createRadioButton("French", new Rectangle(200, 728, 15, 15)));
+        group.addKid(builder.createRadioButton("German", new Rectangle(260, 728, 15, 15)));
+        group.addKid(builder.createRadioButton("Russian", new Rectangle(330, 728, 15, 15)));
+        group.addKid(builder.createRadioButton("Spanish", new Rectangle(400, 728, 15, 15)));
         form.addField(group);
 
         //Create checkboxes
