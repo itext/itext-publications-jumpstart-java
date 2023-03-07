@@ -10,6 +10,7 @@ import com.itextpdf.forms.fields.CheckBoxFormFieldBuilder;
 import com.itextpdf.forms.fields.ChoiceFormFieldBuilder;
 import com.itextpdf.forms.fields.PushButtonFormFieldBuilder;
 import com.itextpdf.forms.fields.RadioFormFieldBuilder;
+import com.itextpdf.forms.fields.properties.CheckBoxType;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -87,7 +88,7 @@ public class C04E02_JobApplication {
         for (int i = 0; i < 3; i++) {
             PdfButtonFormField checkField = new CheckBoxFormFieldBuilder(doc.getPdfDocument(), "experience".concat(String.valueOf(i + 1)))
                     .setWidgetRectangle(new Rectangle(119 + i * 69, 701, 15, 15))
-                    .setCheckType(PdfFormField.TYPE_CHECK).createCheckBox();
+                    .setCheckType(CheckBoxType.CHECK).createCheckBox();
             checkField.setValue("Off", true);
             form.addField(checkField);
         }

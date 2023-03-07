@@ -4,6 +4,7 @@ import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfButtonFormField;
 import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.forms.fields.CheckBoxFormFieldBuilder;
+import com.itextpdf.forms.fields.properties.CheckBoxType;
 import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
@@ -54,7 +55,7 @@ public class C05E01_AddAnnotationsAndContent {
         PdfAcroForm form = PdfAcroForm.getAcroForm(pdfDoc, true);
         PdfButtonFormField checkField = new CheckBoxFormFieldBuilder(pdfDoc, "agreement")
                 .setWidgetRectangle(new Rectangle(245, 594, 15, 15))
-                .setCheckType(PdfFormField.TYPE_CHECK).createCheckBox();
+                .setCheckType(CheckBoxType.CHECK).createCheckBox();
         checkField.setValue("Off", true);
         checkField.setRequired(true);
         form.addField(checkField);
