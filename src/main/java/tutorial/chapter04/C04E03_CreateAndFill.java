@@ -31,7 +31,7 @@ public class C04E03_CreateAndFill {
         Document doc = new Document(pdf);
 
         PdfAcroForm form = C04E02_JobApplication.addAcroForm(doc);
-        Map<String, PdfFormField> fields = form.getFormFields();
+        Map<String, PdfFormField> fields = form.getAllFormFields();
         fields.get("name").setValue("James Bond");
         fields.get("language").setValue("English");
         fields.get("experience1").setValue("Off");

@@ -29,7 +29,7 @@ public class C04E05_FlattenForm {
 
 
         PdfAcroForm form = PdfAcroForm.getAcroForm(pdf, true);
-        Map<String, PdfFormField> fields = form.getFormFields();
+        Map<String, PdfFormField> fields = form.getAllFormFields();
         fields.get("name").setValue("James Bond");
         fields.get("language").setValue("English");
         fields.get("experience1").setValue("Off");

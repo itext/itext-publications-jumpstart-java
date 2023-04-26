@@ -3,6 +3,8 @@ package tutorial.chapter05;
 import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfButtonFormField;
 import com.itextpdf.forms.fields.PdfFormField;
+import com.itextpdf.forms.fields.CheckBoxFormFieldBuilder;
+import com.itextpdf.forms.fields.properties.CheckBoxType;
 import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
@@ -51,14 +53,16 @@ public class C05E01_AddAnnotationsAndContent {
 
         //Add form field
         PdfAcroForm form = PdfAcroForm.getAcroForm(pdfDoc, true);
-        PdfButtonFormField checkField = PdfFormField.createCheckBox(pdfDoc, new Rectangle(245, 594, 15, 15),
-                "agreement", "Off", PdfFormField.TYPE_CHECK);
+        PdfButtonFormField checkField = new CheckBoxFormFieldBuilder(pdfDoc, "agreement")
+                .setWidgetRectangle(new Rectangle(245, 594, 15, 15))
+                .setCheckType(CheckBoxType.CHECK).createCheckBox();
+        checkField.setValue("Off", true);
         checkField.setRequired(true);
         form.addField(checkField);
 
         //Update reset button
-        form.getField("reset").setAction(PdfAction.createResetForm(new String[]{"name", "language",
-                "experience1", "experience2", "experience3", "shift", "info", "agreement"}, 0));
+        form.getField("reset").getFirstFormAnnotation().setAction(PdfAction.createResetForm(new String[]{"name",
+                "language", "experience1", "experience2", "experience3", "shift", "info", "agreement"}, 0));
 
         pdfDoc.close();
 

@@ -34,9 +34,9 @@ public class C05E02_FillAndModifyForm {
 
 
         PdfAcroForm form = PdfAcroForm.getAcroForm(pdfDoc, true);
-        Map<String, PdfFormField> fields = form.getFormFields();
+        Map<String, PdfFormField> fields = form.getAllFormFields();
 
-        fields.get("name").setValue("James Bond").setBackgroundColor(ColorConstants.ORANGE);
+        fields.get("name").setValue("James Bond").getFirstFormAnnotation().setBackgroundColor(ColorConstants.ORANGE);
         fields.get("language").setValue("English");
 
         fields.get("experience1").setValue("Yes");
