@@ -1,5 +1,13 @@
 /*
     This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    For more information, please contact iText Software at this address:
+    sales@itextpdf.com
+ */
+/*
+    This file is part of the iText (R) project.
     Copyright (c) 1998-2022 iText Group NV
     Authors: iText Software.
 
