@@ -3,6 +3,7 @@ package tutorial.chapter04;
 import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfButtonFormField;
 import com.itextpdf.forms.fields.PdfChoiceFormField;
+import com.itextpdf.forms.fields.PdfFormCreator;
 import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.forms.fields.PdfTextFormField;
 import com.itextpdf.forms.fields.TextFormFieldBuilder;
@@ -65,7 +66,7 @@ public class C04E02_JobApplication {
         doc.add(new Paragraph("Additional information:").setFontSize(12));
 
         //Add acroform
-        PdfAcroForm form = PdfAcroForm.getAcroForm(doc.getPdfDocument(), true);
+        PdfAcroForm form = PdfFormCreator.getAcroForm(doc.getPdfDocument(), true);
 
         //Create text field
         PdfTextFormField nameField = new TextFormFieldBuilder(doc.getPdfDocument(), "name")

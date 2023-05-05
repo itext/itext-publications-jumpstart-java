@@ -1,6 +1,7 @@
 package tutorial.chapter05;
 
 import com.itextpdf.forms.PdfAcroForm;
+import com.itextpdf.forms.fields.PdfFormCreator;
 import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.colors.ColorConstants;
@@ -33,7 +34,7 @@ public class C05E02_FillAndModifyForm {
         PdfDocument pdfDoc = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
 
 
-        PdfAcroForm form = PdfAcroForm.getAcroForm(pdfDoc, true);
+        PdfAcroForm form = PdfFormCreator.getAcroForm(pdfDoc, true);
         Map<String, PdfFormField> fields = form.getAllFormFields();
 
         fields.get("name").setValue("James Bond").getFirstFormAnnotation().setBackgroundColor(ColorConstants.ORANGE);

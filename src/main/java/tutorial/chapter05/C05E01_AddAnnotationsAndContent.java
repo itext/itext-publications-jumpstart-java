@@ -2,6 +2,7 @@ package tutorial.chapter05;
 
 import com.itextpdf.forms.PdfAcroForm;
 import com.itextpdf.forms.fields.PdfButtonFormField;
+import com.itextpdf.forms.fields.PdfFormCreator;
 import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.forms.fields.CheckBoxFormFieldBuilder;
 import com.itextpdf.forms.fields.properties.CheckBoxType;
@@ -52,7 +53,7 @@ public class C05E01_AddAnnotationsAndContent {
                 .endText();
 
         //Add form field
-        PdfAcroForm form = PdfAcroForm.getAcroForm(pdfDoc, true);
+        PdfAcroForm form = PdfFormCreator.getAcroForm(pdfDoc, true);
         PdfButtonFormField checkField = new CheckBoxFormFieldBuilder(pdfDoc, "agreement")
                 .setWidgetRectangle(new Rectangle(245, 594, 15, 15))
                 .setCheckType(CheckBoxType.CHECK).createCheckBox();
