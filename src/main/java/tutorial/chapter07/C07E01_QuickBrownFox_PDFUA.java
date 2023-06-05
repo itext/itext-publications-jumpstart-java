@@ -49,7 +49,7 @@ public class C07E01_QuickBrownFox_PDFUA {
         pdf.getCatalog().setViewerPreferences(
                 new PdfViewerPreferences().setDisplayDocTitle(true));
         PdfDocumentInfo info = pdf.getDocumentInfo();
-        info.setTitle("iText7 PDF/UA example");
+        info.setTitle("iText PDF/UA example");
 
         //Fonts need to be embedded
         PdfFont font = PdfFontFactory.createFont(FONT, PdfEncodings.WINANSI, EmbeddingStrategy.FORCE_EMBEDDED);

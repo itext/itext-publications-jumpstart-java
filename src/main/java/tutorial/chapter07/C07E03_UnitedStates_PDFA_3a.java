@@ -55,7 +55,7 @@ public class C07E03_UnitedStates_PDFA_3a {
         pdf.getCatalog().setViewerPreferences(
                 new PdfViewerPreferences().setDisplayDocTitle(true));
         PdfDocumentInfo info = pdf.getDocumentInfo();
-        info.setTitle("iText7 PDF/A-3 example");
+        info.setTitle("iText PDF/A-3 example");
 
         //Add attachment
         PdfDictionary parameters = new PdfDictionary();

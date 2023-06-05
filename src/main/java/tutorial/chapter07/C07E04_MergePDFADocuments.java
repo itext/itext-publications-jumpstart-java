@@ -41,7 +41,7 @@ public class C07E04_MergePDFADocuments {
         pdf.getCatalog().setViewerPreferences(
                 new PdfViewerPreferences().setDisplayDocTitle(true));
         PdfDocumentInfo info = pdf.getDocumentInfo();
-        info.setTitle("iText7 PDF/A-1a example");
+        info.setTitle("iText PDF/A-1a example");
 
         //Create PdfMerger instance
         PdfMerger merger = new PdfMerger(pdf);
