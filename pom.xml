@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.itextpdf.publications</groupId>
   <artifactId>tutorial</artifactId>
-  <version>8.0.0</version>
-  <name>iText 7 Publications: Jump-start Tutorial</name>
+  <version>8.0.1</version>
+  <name>iText Publications: Jump-start Tutorial</name>
   <url>https://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
   <properties>
     <bouncycastle.version>1.70</bouncycastle.version>

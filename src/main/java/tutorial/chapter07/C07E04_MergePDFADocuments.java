@@ -1,3 +1,11 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    For more information, please contact iText Software at this address:
+    sales@itextpdf.com
+ */
 package tutorial.chapter07;
 
 import com.itextpdf.kernel.pdf.*;
@@ -33,7 +41,7 @@ public class C07E04_MergePDFADocuments {
         pdf.getCatalog().setViewerPreferences(
                 new PdfViewerPreferences().setDisplayDocTitle(true));
         PdfDocumentInfo info = pdf.getDocumentInfo();
-        info.setTitle("iText7 PDF/A-1a example");
+        info.setTitle("iText PDF/A-1a example");
 
         //Create PdfMerger instance
         PdfMerger merger = new PdfMerger(pdf);

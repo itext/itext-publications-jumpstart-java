@@ -1,8 +1,8 @@
-# [iText 7: Jump-Start Tutorial](http://developers.itextpdf.com/content/itext-7-jump-start-tutorial) #
+# [iText: Jump-Start Tutorial](https://kb.itextpdf.com/home/it7kb/ebooks/itext-jump-start-tutorial-for-java) #
 
 ## How to build ##
 
-To build the iText 7 Jump-Start Tutorial, [Maven][1], 
+To build the iText Jump-Start Tutorial, [Maven][1], 
 [Ghostscript][2] and [Imagemagick][3] must be installed.
 
 ```bash

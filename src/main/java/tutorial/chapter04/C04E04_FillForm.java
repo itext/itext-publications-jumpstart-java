@@ -1,5 +1,14 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    For more information, please contact iText Software at this address:
+    sales@itextpdf.com
+ */
 package tutorial.chapter04;
 
+import com.itextpdf.forms.fields.PdfFormCreator;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfReader;
 import com.itextpdf.kernel.pdf.PdfWriter;
@@ -28,7 +37,7 @@ public class C04E04_FillForm {
         PdfDocument pdf = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
 
 
-        PdfAcroForm form = PdfAcroForm.getAcroForm(pdf, true);
+        PdfAcroForm form = PdfFormCreator.getAcroForm(pdf, true);
         Map<String, PdfFormField> fields = form.getAllFormFields();
         fields.get("name").setValue("James Bond");
         fields.get("language").setValue("English");

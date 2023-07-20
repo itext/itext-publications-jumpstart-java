@@ -1,6 +1,15 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    For more information, please contact iText Software at this address:
+    sales@itextpdf.com
+ */
 package tutorial.chapter06;
 
 import com.itextpdf.forms.PdfAcroForm;
+import com.itextpdf.forms.fields.PdfFormCreator;
 import com.itextpdf.forms.fields.PdfFormField;
 import com.itextpdf.io.source.ByteArrayOutputStream;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -41,7 +50,7 @@ public class C06E09_FillOutFlattenAndMergeForms {
             PdfDocument sourcePdfDocument = new PdfDocument(new PdfReader(SRC), new PdfWriter(baos));
 
             //Read fields
-            PdfAcroForm form = PdfAcroForm.getAcroForm(sourcePdfDocument, true);
+            PdfAcroForm form = PdfFormCreator.getAcroForm(sourcePdfDocument, true);
             StringTokenizer tokenizer = new StringTokenizer(line, ";");
             Map<String, PdfFormField> fields = form.getAllFormFields();
 

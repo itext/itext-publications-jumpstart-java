@@ -1,3 +1,11 @@
+/*
+    This file is part of the iText (R) project.
+    Copyright (c) 1998-2023 Apryse Group NV
+    Authors: Apryse Software.
+
+    For more information, please contact iText Software at this address:
+    sales@itextpdf.com
+ */
 package tutorial.chapter07;
 
 import com.itextpdf.kernel.font.PdfFont;
@@ -47,7 +55,7 @@ public class C07E03_UnitedStates_PDFA_3a {
         pdf.getCatalog().setViewerPreferences(
                 new PdfViewerPreferences().setDisplayDocTitle(true));
         PdfDocumentInfo info = pdf.getDocumentInfo();
-        info.setTitle("iText7 PDF/A-3 example");
+        info.setTitle("iText PDF/A-3 example");
 
         //Add attachment
         PdfDictionary parameters = new PdfDictionary();
