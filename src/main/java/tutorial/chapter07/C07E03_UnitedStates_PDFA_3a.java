@@ -35,7 +35,7 @@ public class C07E03_UnitedStates_PDFA_3a {
     
     public void createPdf(String dest) throws IOException {
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
-            PdfAConformanceLevel.PDF_A_3A,
+            PdfAConformance.PDF_A_3A,
             new PdfOutputIntent("Custom", "", "http://www.color.org",
                     "sRGB IEC61966-2.1", new FileInputStream(INTENT)));
         Document document = new Document(pdf, PageSize.A4.rotate());

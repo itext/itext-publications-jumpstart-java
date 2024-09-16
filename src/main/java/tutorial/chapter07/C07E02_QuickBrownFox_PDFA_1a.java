@@ -5,7 +5,7 @@ import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.font.PdfFontFactory.EmbeddingStrategy;
-import com.itextpdf.kernel.pdf.PdfAConformanceLevel;
+import com.itextpdf.kernel.pdf.PdfAConformance;
 import com.itextpdf.kernel.pdf.PdfOutputIntent;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
@@ -34,7 +34,7 @@ public class C07E02_QuickBrownFox_PDFA_1a {
     public void createPdf(String dest) throws IOException {
         //Initialize PDFA document with output intent
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
-            PdfAConformanceLevel.PDF_A_1A,
+            PdfAConformance.PDF_A_1A,
             new PdfOutputIntent("Custom", "", "http://www.color.org",
                     "sRGB IEC61966-2.1", new FileInputStream(INTENT)));
         Document document = new Document(pdf);

@@ -23,7 +23,7 @@ public class C07E04_MergePDFADocuments {
     public void createPdf(String dest) throws IOException {
         //Initialize PDFA document with output intent
         PdfADocument pdf = new PdfADocument(new PdfWriter(dest),
-            PdfAConformanceLevel.PDF_A_1A,
+            PdfAConformance.PDF_A_1A,
             new PdfOutputIntent("Custom", "", "http://www.color.org",
                     "sRGB IEC61966-2.1", new FileInputStream(INTENT)));
 
