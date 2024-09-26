@@ -4,9 +4,9 @@ import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.kernel.colors.Color;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.colors.DeviceCmyk;
-import com.itextpdf.kernel.events.Event;
-import com.itextpdf.kernel.events.IEventHandler;
-import com.itextpdf.kernel.events.PdfDocumentEvent;
+import com.itextpdf.kernel.pdf.event.AbstractPdfDocumentEventHandler;
+import com.itextpdf.kernel.pdf.event.AbstractPdfDocumentEvent;
+import com.itextpdf.kernel.pdf.event.PdfDocumentEvent;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
@@ -87,10 +87,9 @@ public class C03E03_UFO {
         }
     }
 
-
-    protected class MyEventHandler implements IEventHandler {
-
-        public void handleEvent(Event event) {
+    protected static class MyEventHandler extends AbstractPdfDocumentEventHandler {
+        @Override
+        public void onAcceptedEvent(AbstractPdfDocumentEvent event) {
             PdfDocumentEvent docEvent = (PdfDocumentEvent) event;
             PdfDocument pdfDoc = docEvent.getDocument();
             PdfPage page = docEvent.getPage();
