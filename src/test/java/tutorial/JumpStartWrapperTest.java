@@ -1,16 +1,9 @@
-/*
-    This file is part of the iText (R) project.
-    Copyright (c) 1998-2022 iText Group NV
-    Authors: iText Software.
-
-    For more information, please contact iText Software at this address:
-    sales@itextpdf.com
- */
 package tutorial;
 
 import com.itextpdf.kernel.utils.CompareTool;
 import com.itextpdf.test.RunnerSearchConfig;
 import com.itextpdf.test.WrappedSamplesRunner;
+
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Tag;

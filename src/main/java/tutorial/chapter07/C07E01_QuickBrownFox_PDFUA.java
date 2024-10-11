@@ -8,6 +8,7 @@ import com.itextpdf.kernel.font.PdfFontFactory.EmbeddingStrategy;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfDocumentInfo;
 import com.itextpdf.kernel.pdf.PdfString;
+import com.itextpdf.kernel.pdf.PdfUAConformance;
 import com.itextpdf.kernel.pdf.PdfViewerPreferences;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.WriterProperties;
@@ -15,6 +16,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Image;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Text;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -32,7 +34,8 @@ public class C07E01_QuickBrownFox_PDFUA {
     }
     
     public void createPdf(String dest) throws IOException {
-        PdfDocument pdf = new PdfDocument(new PdfWriter(dest, new WriterProperties().addUAXmpMetadata()));
+        PdfDocument pdf = new PdfDocument(new PdfWriter(dest, new WriterProperties().addPdfUaXmpMetadata(
+                PdfUAConformance.PDF_UA_1)));
         Document document = new Document(pdf);
 
         //Setting some required parameters

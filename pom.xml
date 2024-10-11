@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.itextpdf.publications</groupId>
   <artifactId>tutorial</artifactId>
-  <version>8.0.5</version>
+  <version>9.0.0</version>
   <name>iText Publications: Jump-start Tutorial</name>
   <url>https://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
   <properties>
@@ -14,7 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <spotbugs.version>3.1.11</spotbugs.version>
-    <slf4j-log4j12.version>1.7.36</slf4j-log4j12.version>
+    <slf4j-log4j12.version>2.0.16</slf4j-log4j12.version>
   </properties>
   <dependencies>
     <dependency>
