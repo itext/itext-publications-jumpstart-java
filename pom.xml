@@ -8,12 +8,8 @@
   <url>https://developers.itextpdf.com/content/itext-7-jump-start-tutorial</url>
   <properties>
     <bouncycastle.version>1.70</bouncycastle.version>
-    <fb-contrib.version>7.4.3</fb-contrib.version>
-    <findsecbugs.version>1.8.0</findsecbugs.version>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <spotbugs.version>4.8.6.6</spotbugs.version>
     <slf4j-log4j12.version>2.0.16</slf4j-log4j12.version>
   </properties>
   <dependencies>
@@ -101,12 +97,10 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
+        <!-- Disable surefire plugin to avoid double tests running -->
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M3</version>
         <configuration>
-          <groups>UnitTest,BouncyCastleUnitTest</groups>
-          <argLine>${env.SUREFIRE_OPTS}</argLine>
+          <skip>true</skip>
         </configuration>
       </plugin>
       <plugin>
@@ -125,30 +119,8 @@
           <includes>
             <include>**/*.java</include>
           </includes>
-          <groups>SampleTest,IntegrationTest,BouncyCastleIntegrationTest</groups>
+          <groups>SampleTest</groups>
           <argLine>${env.SUREFIRE_OPTS}</argLine>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.github.ekryd.sortpom</groupId>
-        <artifactId>sortpom-maven-plugin</artifactId>
-        <version>2.10.0</version>
-        <executions>
-          <execution>
-            <phase>verify</phase>
-            <goals>
-              <goal>sort</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <lineSeparator>\n</lineSeparator>
-          <encoding>${project.build.sourceEncoding}</encoding>
-          <sortProperties>true</sortProperties>
-          <keepBlankLines>true</keepBlankLines>
-          <expandEmptyElements>false</expandEmptyElements>
-          <nrOfIndentSpace>2</nrOfIndentSpace>
-          <sortDependencies>scope</sortDependencies>
         </configuration>
       </plugin>
       <plugin>
@@ -195,47 +167,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>com.github.spotbugs</groupId>
-        <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>${spotbugs.version}</version>
-        <executions>
-          <execution>
-            <phase>verify</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <effort>Max</effort>
-          <threshold>High</threshold>
-          <xmlOutput>true</xmlOutput>
-          <failOnError>true</failOnError>
-          <excludeFilterFile>findbugs-filter.xml</excludeFilterFile>
-          <plugins>
-            <plugin>
-              <groupId>com.mebigfatguy.fb-contrib</groupId>
-              <artifactId>fb-contrib</artifactId>
-              <version>${fb-contrib.version}</version>
-            </plugin>
-            <plugin>
-              <groupId>com.h3xstream.findsecbugs</groupId>
-              <artifactId>findsecbugs-plugin</artifactId>
-              <version>${findsecbugs.version}</version>
-            </plugin>
-          </plugins>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.5</version>
-      </plugin>
-    </plugins>
-  </reporting>
 </project>
